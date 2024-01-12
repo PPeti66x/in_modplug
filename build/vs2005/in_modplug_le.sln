@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "in_modplug", "in_modplug_le.vcproj", "{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugMFCGUI|Win32 = DebugMFCGUI|Win32
+		DebugNOCONFIG|Win32 = DebugNOCONFIG|Win32
+		Release|Win32 = Release|Win32
+		ReleaseMFCGUI|Win32 = ReleaseMFCGUI|Win32
+		ReleaseNOCONFIG|Win32 = ReleaseNOCONFIG|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.Debug|Win32.ActiveCfg = Debug|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.Debug|Win32.Build.0 = Debug|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.DebugMFCGUI|Win32.ActiveCfg = DebugMFCGUI|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.DebugMFCGUI|Win32.Build.0 = DebugMFCGUI|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.DebugNOCONFIG|Win32.ActiveCfg = DebugNOCONFIG|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.DebugNOCONFIG|Win32.Build.0 = DebugNOCONFIG|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.Release|Win32.ActiveCfg = Release|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.Release|Win32.Build.0 = Release|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.ReleaseMFCGUI|Win32.ActiveCfg = ReleaseMFCGUI|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.ReleaseMFCGUI|Win32.Build.0 = ReleaseMFCGUI|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.ReleaseNOCONFIG|Win32.ActiveCfg = ReleaseNOCONFIG|Win32
+		{1FE4D561-469C-4195-A7D7-F2D7FEBF3017}.ReleaseNOCONFIG|Win32.Build.0 = ReleaseNOCONFIG|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

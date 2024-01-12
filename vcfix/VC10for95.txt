@@ -1,0 +1,28 @@
+VC++2005/2008/2010 でコンパイルしたプログラムを Windows 95/98/Me/2000で動くようにするライブラリ。
+ (c)2011-2023 BlackWingCat/PFW
+
+使い方
+#define WINVER2 で対応するWindows バージョンを入れる
+95なら #define WINVER2 0x0400
+98/Meなら  #define WINVER2 0x0410
+2000なら #define WINVER2 0x0500
+DLLの場合は
+#define DLLMODE を追加。
+そして、#include "commonfix.h" を追加。そしてコンパイル
+
+Win9x系で VC2008/2010の場合はそのままだと実行できないのでコンパイルしたプログラムを
+spw95cnv.exe へドラッグ＆ドロップ。
+
+フリーソフト。
+商用利用の制限はなし。
+コピーライトをつけるかライブラリ使用したことをドキュメントに書いてくれればOK。
+それが無理な場合は、SNSやブログコメントなどで、連絡してくれればかまわない。
+寄付は歓迎。
+
+Support Blog: http://blog.livedoor.jp/blackwingcat/archives/1452362.html
+Twitter: BlackWingCat
+misskey.io BlackWingCat
+discord blackwingcat#0501
+
+Paypal
+https://www.paypal.com/jp/cgi-bin/webscr?cmd=_flow&dispatch=50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9b61f737ba21b081982c6ea0c3af0b8ad315dd45f3fe2ad43b

@@ -1,0 +1,434 @@
+//Microsoft Developer Studio generated resource script.
+//
+#if _MSC_VER == 1200 //VC6/98
+  #include "vc6ver.h"
+#endif //VC6/98
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include <windows.h>
+#include <commctrl.h>
+#include <winuser.h>
+#include <version.h>
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include <windows.h>\r\n"
+    "#include <commctrl.h>\r\n"
+    "#include <winuser.h>\r\n"
+    "#include <version.h>\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION IN_MODPLUG_VMAJOR, IN_MODPLUG_VMINOR, IN_MODPLUG_VPATCH, IN_MODPLUG_VREVISION
+ PRODUCTVERSION LIBMODPLUG_VMAJOR, LIBMODPLUG_VMINOR, LIBMODPLUG_VPATCH, LIBMODPLUG_VREVISION
+ FILEFLAGSMASK 0x0L
+#ifdef _DEBUG
+ FILEFLAGS (VS_FF_DEBUG|VS_FF_SPECIALBUILD)
+#else
+ FILEFLAGS (VS_FF_SPECIALBUILD)
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904E4"
+        BEGIN
+            VALUE "CompanyName", IN_MODPLUG_COMPANY
+            VALUE "FileDescription", "ModPlug wrapper input plugin for Winamp"
+            VALUE "FileVersion", IN_MODPLUG_TVERSION
+            VALUE "InternalName", "in_modplug.dll"
+            VALUE "LegalCopyright", IN_MODPLUG_COPYRIGHT
+            VALUE "OriginalFilename", "in_modplug.dll"
+            VALUE "ProductName", "ModPlug wrapper input plugin for Winamp"
+            VALUE "ProductVersion", LIBMODPLUG_TVERSION
+#ifdef INFOTIMER
+  #define INFOTIMERSTATUS "InfoTimer=1"
+#else
+  #define INFOTIMERSTATUS "InfoTimer=0"
+#endif
+#ifdef MFCGUI
+  #define GUITYPE "GUI=MFC"
+#else
+  #ifdef NOGUICONFIG
+    #define GUITYPE "GUI=none"
+  #else
+    #define GUITYPE "GUI=native"
+  #endif
+#endif
+#ifdef USEEXTRAFEATURES
+  #define EXTRAFEATURESSTATUS "ExtraFeatures=1"
+#else
+  #define EXTRAFEATURESSTATUS "ExtraFeatures=0"
+#endif
+#ifdef C2DLLVERSTR
+  #define VC6COMPILER C2DLLVERSTR
+#else
+  #ifdef C2DLLVERALL
+    #define VC6COMPILER "C2.DLL_v" C2DLLVERALL
+  #endif
+#endif
+#ifdef VC6COMPILER
+            VALUE "SpecialBuild", VC6COMPILER "; " INFOTIMERSTATUS "; " GUITYPE "; " EXTRAFEATURESSTATUS
+#else
+            VALUE "SpecialBuild", INFOTIMERSTATUS "; " GUITYPE "; " EXTRAFEATURESSTATUS
+#endif
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_INFO DIALOG DISCARDABLE  0, 0, 256, 196
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "Module Info"
+FONT 8, "MS Shell Dlg"
+BEGIN
+    LTEXT           "File:",-1,8,8,24,12
+    EDITTEXT        IDC_FILENAME,36,6,212,14,ES_READONLY
+    LTEXT           "Title:",-1,8,26,24,12
+    EDITTEXT        IDC_TITLE,36,24,212,14,ES_READONLY
+    LTEXT           "Size:",-1,8,44,40,12
+    EDITTEXT        IDC_FILESIZE,52,44,64,12,ES_READONLY | NOT WS_BORDER
+    LTEXT           "Type:",-1,132,44,40,12
+    EDITTEXT        IDC_MODTYPE,176,44,64,12,ES_READONLY | NOT WS_BORDER
+    LTEXT           "Length:",-1,8,56,40,12
+    EDITTEXT        IDC_LENGTH,52,56,64,12,ES_READONLY | NOT WS_BORDER
+    LTEXT           "Channels:",-1,132,56,40,12
+    EDITTEXT        IDC_CHANNELS,176,56,64,12,ES_READONLY | NOT WS_BORDER
+    CONTROL         "",IDC_SAMPLES,"Button",BS_AUTORADIOBUTTON | WS_GROUP | 
+                    WS_TABSTOP,8,68,80,12
+    CONTROL         "",IDC_INSTRUMENTS,"Button",BS_AUTORADIOBUTTON,88,68,80,
+                    12
+    CONTROL         "Comment",IDC_COMMENT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_DISABLED,168,68,80,12
+    LISTBOX         IDC_LIST1,8,82,240,90,LBS_NOINTEGRALHEIGHT | LBS_NOSEL | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST2,8,82,240,90,LBS_NOINTEGRALHEIGHT | LBS_NOSEL | 
+                    NOT WS_VISIBLE | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT,8,82,240,90,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_VISIBLE | 
+                    WS_VSCROLL | WS_HSCROLL
+    LTEXT           "",IDC_INFO,8,176,184,18
+    PUSHBUTTON      "Close",IDC_CLOSE,200,178,48,14
+END
+
+#ifndef NOGUICONFIG
+IDD_CONFIG DIALOG DISCARDABLE  0, 0, 376, 233
+STYLE DS_MODALFRAME | DS_3DLOOK | DS_CENTER | WS_POPUP | WS_VISIBLE | 
+    WS_CAPTION | WS_SYSMENU
+CAPTION "in_modplug Configuration"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,251,212,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,319,212,50,14
+    GROUPBOX        "libmodplug flags",IDC_STATIC_FLAGS,7,7,74,72
+    CONTROL         "Oversampling",IDC_CHECK_OVERSAMPLING,"Button",
+                    BS_AUTOCHECKBOX | WS_GROUP | WS_TABSTOP,12,16,68,10
+    CONTROL         "Noise reduction",IDC_CHECK_NOISEREDUCTION,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,26,68,10
+    CONTROL         "Reverb",IDC_CHECK_REVERB,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,36,68,10
+    CONTROL         "Megabass",IDC_CHECK_MEGABASS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,46,68,10
+    CONTROL         "Surround sound",IDC_CHECK_SURROUND,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,56,68,10
+    CONTROL         "AGC",IDC_CHECK_USEAGC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,66,68,10
+    GROUPBOX        "Sample rate",IDC_STATIC_SAMPLINGRATE,86,7,56,72
+    LISTBOX         IDC_LST_SAMPLINGRATE,92,16,44,58,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Channels",IDC_STATIC_CHANNELS,256,7,54,40
+    CONTROL         "mono",IDC_RADIO_CHANNELSMONO,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,260,16,33,10
+    CONTROL         "stereo",IDC_RADIO_CHANNELSSTEREO,"Button",
+                    BS_AUTORADIOBUTTON,260,25,35,10
+    CONTROL         "quad",IDC_RADIO_CHANNELSQUAD,"Button",
+                    BS_AUTORADIOBUTTON,260,35,32,10
+    GROUPBOX        "Bit depth",IDC_STATIC_BITDEPTH,315,7,54,40
+    CONTROL         "8",IDC_RADIO_BITDEPTH8,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,319,16,20,10
+    CONTROL         "16",IDC_RADIO_BITDEPTH16,"Button",BS_AUTORADIOBUTTON,
+                    319,25,24,10
+    CONTROL         "32",IDC_RADIO_BITDEPTH32,"Button",BS_AUTORADIOBUTTON,
+                    319,35,24,10
+    GROUPBOX        "Interpolation",IDC_STATIC_INTERPOLATION,147,7,104,51
+    CONTROL         "No interpolation",IDC_RADIO_RESAMPLINGNONE,"Button",
+                    BS_AUTORADIOBUTTON | WS_GROUP,151,16,65,10
+    CONTROL         "Linear interpolation",IDC_RADIO_RESAMPLINGLINEAR,"Button",
+                    BS_AUTORADIOBUTTON,151,26,75,10
+    CONTROL         "Cubic spline interpolation",IDC_RADIO_RESAMPLINGCUBIC,
+                    "Button",BS_AUTORADIOBUTTON,151,36,94,10
+    CONTROL         "8-tap FIR filter",IDC_RADIO_RESAMPLING8TAPFIR,"Button",
+                    BS_AUTORADIOBUTTON,151,46,60,10
+    CONTROL         "Use internal volume control",IDC_CHECK_INTVOLUMECTRL,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,147,60,101,10
+    CONTROL         "Seek by orders",IDC_CHECK_SEEKBYORDERS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,147,70,63,10
+    LTEXT           "Stereo separation:",IDC_STXT_STEREOSEPARATION,7,86,66,8
+    LTEXT           "Max.Mix.Channels:",IDC_STXT_MAXMIXCHANNELS,7,122,66,8
+    LTEXT           "Reverb depth:",IDC_STXT_REVERBDEPTH,7,159,66,8
+    LTEXT           "Reverb delay:",IDC_STXT_REVERBDELAY,7,195,66,8
+    CONTROL         "Stereo separation",IDC_SLIDER_STEREOSEPARATION,
+                    "msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,7,97,100,
+                    20
+    CONTROL         "Max.mix.channels",IDC_SLIDER_MAXMIXCHANNELS,
+                    "msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,7,133,100,
+                    20
+    CONTROL         "Reverb depth",IDC_SLIDER_REVERBDEPTH,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,7,170,100,20
+    CONTROL         "Reverb delay",IDC_SLIDER_REVERBDELAY,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,7,206,100,20
+    EDITTEXT        IDC_EDIT_STEREOSEPARATION,73,84,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_MAXMIXCHANNELS,73,120,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_REVERBDEPTH,73,157,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_REVERBDELAY,73,193,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Bass amount:",IDC_STXT_BASSAMOUNT,138,86,66,8
+    LTEXT           "Bass range:",IDC_STXT_BASSRANGE,138,122,66,8
+    LTEXT           "Surround depth:",IDC_STXT_SURROUNDDEPTH,138,159,66,8
+    LTEXT           "Surround delay:",IDC_STXT_SURROUNDDELAY,138,195,66,8
+    CONTROL         "Bass amount",IDC_SLIDER_BASSAMOUNT,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,138,97,100,20
+    CONTROL         "Bass range",IDC_SLIDER_BASSRANGE,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,138,133,100,20
+    CONTROL         "Surround depth",IDC_SLIDER_SURROUNDDEPTH,
+                    "msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,138,170,
+                    100,20
+    CONTROL         "Surround delay",IDC_SLIDER_SURROUNDDELAY,
+                    "msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,138,206,
+                    100,20
+    EDITTEXT        IDC_EDIT_BASSAMOUNT,204,84,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_BASSRANGE,204,120,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_SURROUNDDEPTH,204,157,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_SURROUNDDELAY,204,193,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    LTEXT           "Loop count:",IDC_STXT_LOOPCOUNT,268,51,66,8
+    LTEXT           "Pre-amp (gain):",IDC_STXT_PREAMP,268,86,66,8
+    LTEXT           "Info refresh:",IDC_STXT_INFOREFRESH,268,122,66,8
+    LTEXT           "Info buffering:",IDC_STXT_INFOBUFFERING,268,159,66,8
+    CONTROL         "Loop count",IDC_SLIDER_LOOPCOUNT,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,268,62,100,20
+    CONTROL         "Pre-amp",IDC_SLIDER_PREAMP,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,268,97,100,20
+    CONTROL         "Info refresh",IDC_SLIDER_INFOREFRESH,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,268,133,100,20
+    CONTROL         "Info buffering",IDC_SLIDER_INFOBUFFERING,
+                    "msctls_trackbar32",TBS_AUTOTICKS | WS_TABSTOP,268,170,
+                    100,20
+    EDITTEXT        IDC_EDIT_LOOPCOUNT,334,49,24,12,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_PREAMP,334,84,24,12,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_INFOREFRESH,334,120,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_EDIT_INFOBUFFERING,334,157,24,12,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    PUSHBUTTON      "Formats",IDC_BUTTON_FORMATS,251,195,50,14
+    PUSHBUTTON      "Reset",IDC_BUTTON_CFGRESET,319,195,50,14
+    LTEXT           " ",IDC_STXT_STEREOSEPARATION_UOM,98,86,10,8
+    LTEXT           " ",IDC_STXT_MAXMIXCHANNELS_UOM,98,122,10,8
+    LTEXT           "%",IDC_STXT_REVERBDEPTH_UOM,98,159,10,8
+    LTEXT           "ms",IDC_STXT_REVERBDELAY_UOM,98,195,10,8
+    LTEXT           "%",IDC_STXT_BASSAMOUNT_UOM,229,86,10,8
+    LTEXT           "Hz",IDC_STXT_BASSRANGE_UOM,229,122,10,8
+    LTEXT           "%",IDC_STXT_SURROUNDDEPTH_UOM,229,159,10,8
+    LTEXT           "ms",IDC_STXT_SURROUNDDELAY_UOM,229,195,10,8
+    LTEXT           " ",IDC_STXT_LOOPCOUNT_UOM,359,51,10,8
+    LTEXT           " ",IDC_STXT_PREAMP_UOM,359,86,10,8
+    LTEXT           "ms",IDC_STXT_INFOBUFFERING_UOM,359,159,10,8
+    LTEXT           "ms",IDC_STXT_INFOREFRESH_UOM,359,122,10,8
+END
+
+IDD_FORMATS DIALOG DISCARDABLE  0, 0, 233, 233
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "in_modplug Configuration - Formats"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,119,212,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,176,212,50,14
+    LISTBOX         IDC_LST_FORMATS,7,7,219,171,LBS_MULTIPLESEL | 
+                    LBS_USETABSTOPS | LBS_NOINTEGRALHEIGHT | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_EDIT_FORMATSADDON,7,194,219,14,ES_UPPERCASE | 
+                    ES_AUTOHSCROLL
+    LTEXT           "Spaceless semicolon (;) separated list of additional file extensions:",
+                    IDC_STATIC_FORMATSADDON,7,184,219,8
+    PUSHBUTTON      "Reset",IDC_BUTTON_FMTRESET,7,212,50,14
+    PUSHBUTTON      "!*",IDC_BUTTON_FMTUNSELALL,63,212,18,14
+END
+#endif // !NOGUICONFIG
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 369
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 229
+    END
+
+    IDD_FORMATS, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 226
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 226
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+#ifndef NOGUICONFIG
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HMPFLG_OVERSAMPLING "*highly* recommended."
+    IDS_HMPFLG_NOISEREDUCTION 
+                            "A simple (not very high quality) -6dB/octave lowpass filter for filtering out high frequencies, intended to remove noise and hiss. Keep in mind this may reduce the volume or quality of high-frequency sounds, like cymbals and harmonic-rich timbres."
+    IDS_HMPFLG_REVERB       "The reverb can make the final mix more 'rich'. Like all other effects, don't over-use it. A strong reverb can sound great on some songs, but can also sound bad on others."
+    IDS_HMPFLG_MEGABASS     "Applies a volume boost to the basser frequencies ON TOP of the equalizer settings plus spreads its frequencies around the stereo spectrum. Best used without the equalizer."
+    IDS_HMPFLG_SURROUND     "Dolby Pro-Logic surround effect. When listening to music in stereo, this will mostly be noticable as a slightly delayed echo signal with “wider” stereo sound, but in quad surround mode, the delayed signal is actually played on the rear speakers."
+    IDS_HMPFLG_USEAGC       "Automatic Gain Control: applies a compressor / limiter-type effect that monitors and keeps the volume within a more-or-less steady amplification. Softer sections will be made louder and loud sections will be softened in volume."
+    IDS_HMPLST_FREQUENCY    "Output sampligng rate (in Hz). Set it to your sound card's native sampling frequency (mostly 44100Hz for older and 48000Hz for newer sound cards). NOTE: Audio is internally processed as 44100Hz 32-bit stereo."
+    IDS_HMPRDO_CHANNELSMONO "Mono is not recommended at all. Surround sound is not available in mono mode. NOTE: Audio is internally processed as 44100Hz 32-bit stereo."
+    IDS_HMPRDO_CHANNELSSTEREO 
+                            "Stereo should be used in all cases when you do not known why to use other modes. NOTE: Audio is internally processed as 44100Hz 32-bit stereo."
+    IDS_HMPRDO_CHANNELSQUAD "Quad channel have sense only with Surround mode AND if your reproduction system have rear speakers. Your speaker system must be correctly set in your sound card driver. NOTE: Audio is internally processed as 44100Hz 32-bit stereo."
+    IDS_HMPRDO_BITDEPTH     "Mostly 16-bit is good enough. Use 8-bit only if you want old feeling. 32-bit is an overshot, not supported by old sound cards, and is primarily intented for postprocessing. NOTE: Audio is internally processed as 44100Hz 32-bit stereo."
+    IDS_HMPRDO_RESAMPLINGNONE 
+                            "This is a trade off between performance and quality. No interpolation is the fastest and worst quality solution. Not recommended at all."
+    IDS_HMPRDO_RESAMPLINGLINEAR 
+                            "This is a trade off between performance and quality. Linear interpolation is recommended for old Pentium-1 processors. On some songs it sounds even better than higher quality interpolations."
+    IDS_HMPRDO_RESAMPLINGCUBIC 
+                            "This is a trade off between performance and quality. Cubic Spline interpolation has high quality and is recommended for MMX-capable processors."
+    IDS_HMPRDO_RESAMPLING8TAPFIR 
+                            "This is a trade off between performance and quality. 8-tap FIR (finite impulse response) interpolation has extreme high quality and is recommended for Celerons, Pentium II, AMD K6-2 and above."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HPLFLG_INTVOLUMECTRL 
+                            "Use volume control on ModPlug's internal mixer instead of Winamp's. WARNING! Breaks playback when changing volume."
+    IDS_HPLFLG_SEEKBYORDERS "Seek by orders instead of samples, more accurate playback when seeking."
+    IDS_HMPRNG_STEREOSEPARATION 
+                            "Range 1 - 256. Using this option is recommended only when you're using headphones (in this case 96 is recommended), since a high stereo separation can be annoying, otherwise, you should leave the slider at the middle (128)."
+    IDS_HMPRNG_MAXMIXCHANNELS 
+                            "Range 32 - 256. Maximum number of mixing channels (polyphony)."
+    IDS_HMPRNG_REVERBDEPTH  "Range 0 - 100%."
+    IDS_HMPRNG_REVERBDELAY  "Range 40 - 250 ms."
+    IDS_HMPRNG_BASSAMOUNT   "Range 0 - 100%. The optimal values are highly dependent on your taste and the reproduction system."
+    IDS_HMPRNG_BASSRANGE    "Range 10 - 100 Hz. The optimal values are highly dependent on your taste and the reproduction system."
+    IDS_HMPRNG_SURROUNDDEPTH 
+                            "Range 0 - 100%. Use a small delay (a bigger delay can be useful when mixed with the reverb), and a medium depth."
+    IDS_HMPRNG_SURROUNDDELAY 
+                            "Range 4 - 50 ms. Use a small delay (a bigger delay can be useful when mixed with the reverb), and a medium depth."
+    IDS_HMPRNG_LOOPCOUNT    "Range -1 - 32767. Number of times to loop. -1 loops forever, 0 prevents looping. (values greater than 20 can be set via editbox)"
+    IDS_HMPRNG_PREAMP       "0 (disabled) or range 16 - 128. Overrides the default pre-amplification value. This range is equivalent to cca. 13.25 dB. The default value is around 48, but it depends on number of channels, and other factors."
+    IDS_HPLRNG_INFOREFRESH  "0 (disabled) or range 1 - 2000 ms. Refresh time for file info dialog."
+    IDS_HPLRNG_INFOBUFFERING 
+                            "0 (no buffering) or range 100 - 2000 ms. Buffer length when dialog window is active."
+    IDS_HPLBTN_FORMATS      "You can specify which file formats would play by this plugin. Changes takes effect after restarting the player."
+    IDS_HPLBTN_CFGRESET     "Resets all settings (except file formats) to it's default state."
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_HPLBTN_CFGIDOK      "Accepts and saves the new settings (including file formats)."
+    IDS_HPLBTN_CFGIDCANCEL  "Discards all changes (including file formats)."
+    IDS_HPLLST_FMTLIST      "Fileformats are purely determined by its extension in the Winamp and then passed to the plugin. After restarting the player these formats must be also selected in the player's configuration."
+    IDS_HPLEDT_FMTADDONS    "Additional file extensions to be played back by this plugin. The plugin itself plays back all supported formats regardless of its extension. (If you do not known what are you doing, keep this field empty.)"
+    IDS_HPLBTN_FMTRESET     "Resets all file formats settings to it's default state."
+    IDS_HPLBTN_FMTUNSELALL  "Unselects all formats. (The additional formats are kept.)"
+    IDS_HPLBTN_FMTIDOK      "Accepts (but not saves) the new file formats settings."
+    IDS_HPLBTN_FMTIDCANCEL  "Discards all file formats changes."
+END
+#endif // !NOGUICONFIG
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,8 @@
+in_modplug.sln+in_modplug.vcproj
+THIS VARIANT CURRENTLY NOT WORKS WITH THE ENABLED "LEGACYFIX"!
+This uses the BlackWingCat's vcfix to retain compatibility with Windows 95 on VC2008.
+If you do not want to use a compatibility fix, remove the "LEGACYFIX" preprocessor definition.
+
+in_modplug_le.sln+in_modplug_le.vcproj
+This uses the Cloanto's Legacy Extender to retain compatibility with Windows 95 on VC2008.
+This will work only if the Legacy Extender is correctly installed and configured in the VC2008.

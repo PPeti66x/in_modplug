@@ -1,0 +1,25 @@
+The library make the application compiled with VC++2005/2008/2010 to work on Windows.
+ (c)2011-2023 BlackWingCat/PFW
+
+Usage:
+Input #define WINVER2 Windows Version
+for 95 #define WINVER2 0x0400
+for 98/Me  #define WINVER2 0x0410
+for 2000 #define WINVER2 0x0500
+if DLL is, add  #define DLLMODE
+and add #include "commonfix.h" . And complie.
+
+If you want to support for Win9x, please Drag & Drop the application to spw95cnv.exe.
+
+Freesoft. not be limitted for Commercial usage.
+It is good for me ,You add your application my copyright or discript on document.
+If it is disable, Contact me with SNS or blog comment.
+Donations are welcome.
+
+Support Blog: http://blog.livedoor.jp/blackwingcat/archives/1452362.html
+Twitter: BlackWingCat
+misskey.io BlackWingCat
+discord blackwingcat#0501
+
+Paypal
+https://www.paypal.com/jp/cgi-bin/webscr?cmd=_flow&dispatch=50a222a57771920b6a3d7b606239e4d529b525e0b7e69bf0224adecfb0124e9b61f737ba21b081982c6ea0c3af0b8ad315dd45f3fe2ad43b

@@ -1,0 +1,31 @@
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "in_modplug", "in_modplug.vcproj", "{E8F124A1-498C-449D-8EDB-79FABC0B2807}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugMFCGUI|Win32 = DebugMFCGUI|Win32
+		DebugNOCONFIG|Win32 = DebugNOCONFIG|Win32
+		Release|Win32 = Release|Win32
+		ReleaseMFCGUI|Win32 = ReleaseMFCGUI|Win32
+		ReleaseNOCONFIG|Win32 = ReleaseNOCONFIG|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.Debug|Win32.Build.0 = Debug|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.DebugMFCGUI|Win32.ActiveCfg = DebugMFCGUI|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.DebugMFCGUI|Win32.Build.0 = DebugMFCGUI|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.DebugNOCONFIG|Win32.ActiveCfg = DebugNOCONFIG|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.DebugNOCONFIG|Win32.Build.0 = DebugNOCONFIG|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.Release|Win32.ActiveCfg = Release|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.Release|Win32.Build.0 = Release|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.ReleaseMFCGUI|Win32.ActiveCfg = ReleaseMFCGUI|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.ReleaseMFCGUI|Win32.Build.0 = ReleaseMFCGUI|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.ReleaseNOCONFIG|Win32.ActiveCfg = ReleaseNOCONFIG|Win32
+		{E8F124A1-498C-449D-8EDB-79FABC0B2807}.ReleaseNOCONFIG|Win32.Build.0 = ReleaseNOCONFIG|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
